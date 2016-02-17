@@ -1,12 +1,12 @@
 'use strict';
 
 var express = require('express');
-var topMovies = require('./routes/api/top-movies');
-var request = require('request');
+
+var api = require('./routes/api');
 
 var app = express();
 
-app.use('/api', topMovies);
+app.use('/api', api);
 
 app.listen(process.env.PORT || 3000)
 
@@ -23,3 +23,10 @@ look up pineapple program.
 tor is almost a free vpn
 torproject.org
 */
+
+/*
+  1. Node core require's
+  br
+  2. Third part libraries (express storm path, requests ...)
+  br
+  3. Your local modules. (lib / routes / api / ...)
