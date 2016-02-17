@@ -8,7 +8,7 @@ var app = express();
 
 
 app.get('/', (req, res) => {
-  console.log("hello world")
+  res.json([hello: 'world'])
 })
 
 app.listen(process.env.PORT || 3000)
