@@ -8,4 +8,4 @@ var router = express.Router();
 
 router.use('/top-movies', topMovies);
 
-module.exports
+module.exports = router
