@@ -10,12 +10,12 @@ var router = express.Router();
 
 // GET /api/top-movies
 router.get('/top-movies', (req, res, next) => {
-  topMovies((movies => {
+  topMovies((err, movies) => {
     if (err) {
       return next(err);
     }
 
-    res.json({ movies: movies })
+    res.json({ movies: movies });
   });
 });
 
